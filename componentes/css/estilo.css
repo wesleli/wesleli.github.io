@@ -1,0 +1,236 @@
+html, body {width: 100%;
+height: 100%;}
+
+body {background: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #083c4a;
+    opacity: 0.9;
+    height: 10vh;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    padding-top: 25px;
+    float: left;
+}
+
+.social-media {
+    float: right;
+}
+
+.social-media ul li {
+    align-content: center;
+    display: inline-block;
+    list-style: none;
+    padding-bottom: 10px;
+    margin-left: 26px;
+}
+.social-media ul li:hover {
+border-bottom: solid 3px #95cddc;
+transition: 2s;
+}
+
+.menu-principal {
+    padding-top: 72px;
+    height: 675px;
+}
+
+.caixa-dialogo {
+    background-color:rgba(0, 0, 0, 0.8);
+    border-left: 2px  solid;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    border-width: 2px;
+    border-color: #cdd7da;
+    float: left;
+    margin-bottom: 60px;
+    margin-right: 200px;
+    opacity: 0.8;
+    transition: 2s;
+}
+
+.bar-caixa-dialogo {
+    padding-left: 30px;
+    padding-top: 5px;
+    height: 35px;
+    background-color: white;
+    background-image: url('../img/gradbox.png');
+    transition: 2s;
+}
+
+.input-dialogo {
+    padding-left: 10px;
+    color: white;
+    width: 480px;
+    height: 250px;
+}
+
+.opcao-menu {
+    margin-right: 80px;
+    float: right;
+    display: -webkit-flex;
+      -webkit-flex-direction: column;
+     
+      display: flex;
+      flex-direction: column;
+
+}
+
+
+.anima-button div {
+    background-color: #5d8f9d;
+    margin: 10px 50px 30px;
+    margin-bottom: 50px;
+    height: 45px;
+    width: 200px;
+    transition-duration: 1.5s;
+}
+
+
+.anima-button div:hover {
+    background-color: rgba(0, 0, 0, 0.3); 
+    border-radius: 10px;   
+    margin-left: -5%;
+    height: 45px;
+    width: 250px;
+    transition-duration: 0.5s;}
+
+.opcao {
+    font-size: 20px arial;
+    background-color: #093340;
+    height: 45px;
+    width: 200px;
+    border: 2px solid #5d8f9d;
+    color: #5d8f9d;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+.opcao:hover {
+    align-content: center;
+    font-size: 22px;
+    background-color: #093340;
+    height: 45px;
+    width: 210px;
+    border: 3px solid #95cddc;
+    color: #95cddc;
+    border-radius: 10px;
+}
+
+section {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 5%;
+}
+
+.slide-projetos {
+    
+    display: none;
+
+}
+
+.titulo-projetos {
+    font-size: medium;
+    font: arial;
+    text-align: center;
+    background-color: #083c4a;
+    opacity: 0.9;
+    color: #5d8f9d;
+    padding: 15px;
+    margin: 0;
+}
+
+.titulo-projetos:hover {
+    text-align: center;
+    background-color: #083c4a;
+    opacity: 0.9;
+    color: #95cddc;
+   
+    
+}
+
+.slide-projetos ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+.slide-projetos ul li {
+    display: inline-block;
+    height: 100%;
+    top: 0%;
+    width:20%;
+}
+
+.slide-projetos ul li:hover {
+    width: 23%;
+    transition: 0.5s;
+}
+
+.slide-projetos ul li a div {
+    text-decoration: none;
+    width: 100%;
+    height: 675px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.slide-projetos ul li a div:hover {
+    background-color: rgba(255,255,255,0.5);
+    transition: 0.5s;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  /* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
