@@ -1,0 +1,270 @@
+
+body {
+  background-image: url('../public/background.jpg');
+  background-size: cover;
+}
+
+.corpo {
+  height: 100%;
+  width: 97%;
+  border-right: 8px solid #030303;
+  display: flex;
+}
+
+.letreiro {
+  position: fixed;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  background-color: #593f27;
+  opacity: 0.65;
+  height: 100%;
+  width: 5%;
+  overflow: hidden;
+}
+
+.letreiro p {  
+  display: inline-block;
+  margin-right: 10px;
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
+  font-size: 32px;
+  color: #d9cccc;
+
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 10%;
+  width: 97%;
+  background-image: url('../public/footer.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.footer div {
+  display: inline-block;
+  position: relative;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.redessociais {
+  margin-right: 4%;
+  float: right;
+}
+
+.redessociais ul li{
+  margin-top: 25px ;
+  list-style: none;
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 15px;
+}
+
+.nameoclock {
+  position: absolute;
+  z-index: 2;
+  margin-left: 5%;
+  width: 360px;
+  height: 360px;
+}
+
+
+.data{
+  position: absolute;
+  font-family: 'Climate Crisis', cursive;
+  font-size: 18px;
+  color: #030303;
+  margin-top: 134px;
+  margin-left: 63px;
+  transform: rotate(322deg);
+
+}
+
+.hour {
+  position: absolute;
+  color: #030303;
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
+  font-size: 28px;
+  margin-top: 145px;
+  margin-left: 128px;
+  transform: rotate(45deg);
+}
+
+.saudacao {
+  color: #030303;
+  font-size: 30px;
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
+  margin-top: 290px;
+}
+
+.tiktok {
+  position: absolute;
+  width: 133px;
+  margin-top:98px;
+  margin-left: 50px;
+  animation: makeClock 30s linear infinite;
+}
+
+@keyframes makeClock {
+
+  0% { transform: rotate(0deg);}
+
+  100% {transform: rotate(360deg);}
+}
+
+@keyframes moveText {
+  from {
+    transform: translateX(10%);
+  }
+  to {
+    transform: translateX(93%);
+  }
+}
+
+.navegador {
+  z-index: 1;
+  position: absolute;
+  height: 15%;
+  width: 94%;
+  margin-left: 6%;
+  transition: transform 0.5s ease;
+}
+
+.navegador ul {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.navegador ul li {
+  position: relative;
+  display: inline-block;
+  justify-content: flex-end;
+  margin-bottom: 3px;
+}
+
+.navegador ul li ul {
+  display: none;
+  position: absolute;
+  text-align: right;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.navegador ul li:hover ul {
+  display: block;
+}
+
+.navegador ul li a {
+  display: block;
+  text-decoration: none;
+  font-family: 'Averia Sans Libre', regular;
+  color: #030303;
+  padding-right: 30px;
+  padding-top: 6px;
+}
+
+.navegador ul li a p {
+  margin: 3px;
+  border-bottom: 3px solid transparent;
+}
+
+.navegador ul li a p:hover {
+  border-bottom: 3px solid #a6263e;
+}
+
+.fixed {
+  position: fixed;
+  height: 10%;
+  transform: scale(0.8);
+}
+
+.clock {
+  position: absolute;
+  margin-left: 1%;
+  height: 360px;
+  width: 360px;
+  background-image: url('../public/clockbackground-2.png');
+  background-size: cover;
+}
+
+.circular-inicial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 360px;
+  width: 360px;
+  background-image: url('../public/backgroundcircular01.png');
+  background-size: cover;
+}
+
+.circular-inicial span {
+  display: block;
+  position: flex;
+  font-family: 'Climate Crisis', cursive;
+  color: #d9cccc;
+  text-align: center;
+}
+
+.circular-segundo {
+  position: absolute;
+  height: 360px;
+  width: 360px;
+  background-image: url('../public/backgroundcircular02.png');
+  animation: letsRotate 18s linear infinite;
+}
+
+@keyframes letsRotate {
+
+ 0% { transform: rotate(0deg) }
+
+ 100% { transform: rotate(-360deg);}
+}
+
+@media screen and (max-width: 768px) {
+  /* estilos a serem aplicados quando a largura da tela for menor ou igual a 768 pixels */
+  .clock {
+    width: 260px;
+    height: 260px;
+  }
+  .nameoclock {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+.sobremim {
+  display: flex;
+  margin-top: 10vh;
+  margin-left: 10vw;
+  position: absolute;
+  width: 70vw;
+  height: 78vh;
+  background: url('../public/backgroundSobreMim.png');
+  background-size: cover;
+  align-items: end;
+  justify-content: end;
+}
+
+.blocodescritivo {
+  position: absolute;
+  height: 40vh;
+  width: 60vh;
+  margin-right: 5vw;
+  margin-bottom: 10vh;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.blocodescritivo span {
+  position: absolute;
+  color: #c9d7da;
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
+  margin: 25px;
+  font-size: 20px;
+}
