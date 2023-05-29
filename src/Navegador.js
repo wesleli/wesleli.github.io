@@ -91,7 +91,7 @@ function Navegador () {
     return (
         <div className='conteiner'>
                 <div className={`navegador ${isNavBarFixed ? 'fixed' : ''}`}>
-                    <div style={{marginLeft: width}}>
+                    <div>
                         <ul>
                             <li><a href='#Inicio'><p>INICIO</p></a>
                             </li>
@@ -99,10 +99,10 @@ function Navegador () {
                             </li>
                             <li><a href='#Portfolio'><p>PORTIFÓLIO</p></a>
                               <ul>
-                                <li><a href='#'>Web</a></li>
-                                <li><a href='#'>Desenhos</a></li>
-                                <li><a href='#'>Pintura</a></li>
-                                <li><a href='#'>Fotografia</a></li>
+                                <li><a href='#'><p>Web</p></a></li>
+                                <li><a href='#'><p>Design</p></a></li>
+                                <li><a href='#'><p>Arts</p></a></li>
+                                <li><a href='#'><p>Fotografia</p></a></li>
                               </ul>
                             </li>
                         </ul>

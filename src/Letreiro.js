@@ -10,7 +10,7 @@ function Letreiro() {
 
       const messages = [];
       for (let i = 0; i < 3; i++) {
-        messages.push(<p key={i}>{message}</p>);
+        messages.push(<p style={{ padding: '0px', margin:'0px', marginTop:'10px'}} key={i}>{message}</p>);
       }
     
       useEffect(() => {
@@ -30,8 +30,10 @@ function Letreiro() {
       }, []);
   
     return (
-      <div className='letreiro'><div ref={elementRef} style={{ position: 'relative', bottom:`${position}px` }}>
+      <div style={{display:'block', position:'fixed', height:'100vh'}}>
+      <div className='letreiro'><div ref={elementRef} style={{display:'flex', position:'relative', bottom:`${position}px`, padding: '0px', margin: '0px' }}>
         {messages}
+      </div>
       </div>
       </div>
     ); }
