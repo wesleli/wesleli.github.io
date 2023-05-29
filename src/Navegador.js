@@ -97,7 +97,7 @@ function Navegador () {
                             </li>
                             <li><a href='#SobreMim'><p>SOBRE MIM</p></a>
                             </li>
-                            <li><a href='./'><p>PORTIFÓLIO</p></a>
+                            <li><a href='#Portfolio'><p>PORTIFÓLIO</p></a>
                               <ul>
                                 <li><a href='#'>Web</a></li>
                                 <li><a href='#'>Desenhos</a></li>

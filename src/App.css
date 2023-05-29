@@ -1,6 +1,8 @@
 
-body {
-  background-image: url('../public/background.jpg');
+body{
+  overflow: hidden;
+  background: url('../public/background.jpg');
+  background-attachment: fixed;
   background-size: cover;
 }
 
@@ -12,11 +14,11 @@ body {
 }
 
 .letreiro {
+  
   position: fixed;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  background-color: #593f27;
-  opacity: 0.65;
+  background-color: rgb(211, 207, 159);
   height: 100%;
   width: 5%;
   overflow: hidden;
@@ -27,7 +29,7 @@ body {
   margin-right: 10px;
   font-family: 'Sofia Sans Extra Condensed', sans-serif;
   font-size: 32px;
-  color: #d9cccc;
+  color: #0a0eba;
 
 }
 
@@ -63,6 +65,9 @@ body {
 }
 
 .nameoclock {
+  border-left:5px;
+  border-color: #a6263e;
+  background-color: rgba(211, 207, 159, 0.218);
   position: absolute;
   z-index: 2;
   margin-left: 5%;
@@ -208,7 +213,7 @@ body {
   display: block;
   position: flex;
   font-family: 'Climate Crisis', cursive;
-  color: #d9cccc;
+  color: #2b3ca7;
   text-align: center;
 }
 
@@ -217,7 +222,7 @@ body {
   height: 360px;
   width: 360px;
   background-image: url('../public/backgroundcircular02.png');
-  animation: letsRotate 18s linear infinite;
+  animation: letsRotate 25s linear infinite;
 }
 
 @keyframes letsRotate {
@@ -267,4 +272,20 @@ body {
   font-family: 'Sofia Sans Extra Condensed', sans-serif;
   margin: 25px;
   font-size: 20px;
+}
+
+.sobremim img {
+  width: 80px;
+  align-self: flex-start;
+  margin-right: 80px;
+  animation: letsRotate 100s linear infinite;
+}
+
+.portfolio {
+  display: flex;
+  margin-top: 10vh;
+  margin-left: 10vw;
+  position: absolute;
+  width: 70vw;
+  height: 78vh;
 }

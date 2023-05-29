@@ -5,6 +5,7 @@ import Footer from './Footer';
 import Navegador from './Navegador';
 import ConteinerOne from './ConteinerOne';
 import ConteinerTwo from './ConteinerTwo';
+import ConteinerThree from './ConteinerThree';
 
 
 function App () {
@@ -16,12 +17,15 @@ function App () {
   };
 
   return (
+   
       <div className='corpo'>
+        
           <div style={blackline}></div>  
           <Navegador></Navegador>
           <div style={{zIndex: '0'}}>
           <ConteinerOne></ConteinerOne>
           <ConteinerTwo></ConteinerTwo>
+          <ConteinerThree></ConteinerThree>
           </div>
           <Footer></Footer>
           <Letreiro></Letreiro> 
