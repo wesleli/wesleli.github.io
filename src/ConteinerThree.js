@@ -4,8 +4,8 @@ import React from 'react';
 function ConteinerThree () {
     return(
         <div id='Portfolio'>
-        <div style={{display:'flex', position:'relative'}}>
-            <div id="carouselExampleCaptions" className='carousel carousel-dark slide' data-bs-ride="carousel" style={{ width: '800px', height:'525px', margin:'60px'}}>
+        <div style={{display:'block', position:'absolute'}}>
+            <div id="carouselExampleCaptions" className='carousel carousel-dark slide carrosel' data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>

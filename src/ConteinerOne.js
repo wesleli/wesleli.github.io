@@ -8,8 +8,8 @@ function ConteinerOne () {
             <div className='circular-inicial'>
                 <div className='circular-segundo'>   
                 </div>
-                <div><span style={{fontSize: "18px"}}>Artista Visual,</span><span style={{fontSize: "13px"}}>
-                 Webdesign</span><span style={{fontSize: "10px"}}> e Programador.</span>
+                <div><span className='texto-01'>Artista Visual,</span><span className='texto-02'>
+                 designer</span><span className='texto-03'> e programador.</span>
                 </div>
             </div>
         </div>

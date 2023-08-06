@@ -11,25 +11,18 @@ import ConteinerThree from './ConteinerThree';
 
 
 function App () {
-  const blackline = {
-    right: '0',
-    borderRight: '8px solid #030303',
-    position: 'fixed',
-    height: '100%',
-    marginRight: '3%'
-  };
 
   return (
    
       <div className='corpo conteiner'>
-        
-          <div style={blackline}></div>  
+          
           <Navegador></Navegador>
           <div>
-          <Letreiro></Letreiro> 
+          <Letreiro></Letreiro>
           <ConteinerOne></ConteinerOne>
           <ConteinerTwo></ConteinerTwo>
           <ConteinerThree></ConteinerThree>
+          
           </div>
           <Footer></Footer>
           

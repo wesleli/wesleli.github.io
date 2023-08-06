@@ -14,7 +14,6 @@ function Navegador () {
     const hour = data.getHours().toString().padStart(2, '0');
     const minutes = data.getMinutes().toString().padStart(2, '0');
 
-    const [width, setWidth] = useState(0);
 
    
 
@@ -31,24 +30,6 @@ function Navegador () {
       return () => clearInterval(makeClock)
     }, []);
 
-    useEffect(() => {
-        const handleResize = () => {
-        const screenWidth = window.innerWidth;
-        const percentageWidth = screenWidth * 0.10;
-        const pixelWidth = 360; // exemplo de valor em pixels
-        const totalWidth = percentageWidth + pixelWidth;
-        setWidth(totalWidth);
-      };
-  
-      handleResize();
-  
-      window.addEventListener('resize', handleResize);
-  
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }, []);
-  
 
     useEffect(() => {
       const intervalId = setInterval(() => {
@@ -73,11 +54,19 @@ function Navegador () {
 
     useEffect(() => {
         const handleScroll = () => {
-          const scrollTop = window.pageYOffset;
-          const threshold = 100; // Define o ponto em que a barra de navegação irá diminuir de tamanho e ficar fixa
+          const scrollTop = window.scrollY;
+          const threshold = window.innerHeight - 100; // Define o ponto em que a barra de navegação irá diminuir de tamanho e ficar fixa
     
-          // Verifica se o scrollTop ultrapassou o threshold e atualiza o estado para fixar a barra de navegação
-          setIsNavBarFixed(scrollTop > threshold);
+              // Verifica se o scrollTop ultrapassou o threshold e a barra ainda não está fixa
+              if (scrollTop > threshold && !isNavBarFixed) {
+                setIsNavBarFixed(true);
+                console.log(scrollTop)
+              } else if (scrollTop <= threshold && isNavBarFixed) {
+                // Verifica se o scrollTop está abaixo ou igual ao threshold e a barra já está fixa
+                setIsNavBarFixed(false);
+                console.log(scrollTop)
+              }
+          
         };
     
         window.addEventListener('scroll', handleScroll);
@@ -86,27 +75,30 @@ function Navegador () {
         return () => {
           window.removeEventListener('scroll', handleScroll);
         };
-      }, []);
+      }, [isNavBarFixed]);
+
+
+      const [isMenuOpen, setIsMenuOpen] = useState(false);
+      
+        const handleButtonClick = () => {
+          setIsMenuOpen(!isMenuOpen);
+        };
+
 
     return (
         <div className='conteiner'>
                 <div className={`navegador ${isNavBarFixed ? 'fixed' : ''}`}>
-                    <div>
-                        <ul>
+                    <nav>
+                        <div className={`buttonMenu`} onClick={handleButtonClick}><img src='./menu-icon.png' width={'30px'}></img></div>
+                        <ul className={`listaMenu ${isMenuOpen ? 'open' : ''}`}>
+                          
                             <li><a href='#Inicio'><p>INICIO</p></a>
                             </li>
                             <li><a href='#SobreMim'><p>SOBRE MIM</p></a>
                             </li>
-                            <li><a href='#Portfolio'><p>PORTIFÓLIO</p></a>
-                              <ul>
-                                <li><a href='#'><p>Web</p></a></li>
-                                <li><a href='#'><p>Design</p></a></li>
-                                <li><a href='#'><p>Arts</p></a></li>
-                                <li><a href='#'><p>Fotografia</p></a></li>
-                              </ul>
-                            </li>
-                        </ul>
-                    </div>
+                            <li><a href='#Portfolio'><p>PORTIFÓLIO</p></a></li>
+                        </ul> 
+                    </nav>
                 </div>           
             <div className='nameoclock'>
                 <div className='clock'>
